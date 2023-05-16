@@ -4,7 +4,11 @@ let meriApp = myExpress();
 
 let multer = require('multer')
 
+let token = require('jsonwebtoken')
+
 meriApp.use(myExpress.json())
+
+require("./model/db")
 
 meriApp.listen(3004, function () {
 
@@ -27,77 +31,105 @@ const upload = multer({ storage: storage })
 
 
 
-let token = require('jsonwebtoken')
 
-let signupUser = [];
-let benefits = [];
-let Faqs=[];
-let Feedback=[];
+// let signupUser = [];
+
+let signupUser = require('./model/user');
+let Benefit = require('./model/benefits')
+let Faq = require('./model/faq')
+let Feedback= require('./model/feedback')
+// let benefits = [];
+// let Faqs = [];
+// let Feedback = [];
+
 
 meriApp.post('/userSession', async (req, res) => {
     token.verify(req.body.token, "mano bili mioon", async (err, dataObj) => {
         if (dataObj) {
-            let user = signupUser.find(user => user.userId == dataObj.tokenId)
+            let user = await signupUser.findById(dataObj.userId)
             res.json(user)
         }
     })
 })
 
 
-meriApp.post("/signupUser", (req, res) => {
-    let newUser = req.body;
-    let oldUser = signupUser.find(user => user.email == newUser.email)
-    if (oldUser) {
-        res.send("User Already Exist")
-    } else {
-        signupUser.push(req.body)
-        res.end("Success")
+meriApp.post("/signupUser", async (req, res) => {
 
-    }
+    let newUser = new signupUser(req.body)
+
+    await newUser.save()
+    res.end("ho gya")
+
 })
 
 
-meriApp.post('/loginUser', (req, res) => {
+meriApp.post('/loginUser', async (req, res) => {
 
-    let userMilgya = signupUser.find(user => user.email == req.body.email && user.password == req.body.password)
+    let userMilgya = await signupUser.findOne({ email: req.body.email, password: req.body.password })
+
     if (userMilgya) {
-        token.sign({ tokenId: userMilgya.userId }, "mano bili mioon", { expiresIn: "1y" }, async (err, myToken) => {
-            res.json({ userMilgya, myToken })
-        })
 
+        token.sign({ userId: userMilgya._id }, "mano bili mioon", { expiresIn: "1w" }, async (err, myToken) => {
+
+            res.json({ userMilgya, myToken })
+
+        })
     } else {
         res.status(404).json({ message: "Invalid credentials" })
     }
 })
 
-meriApp.post("/benefits", upload.single('pic'), (req, res) => {
-    let newBenefit = req.body;
+
+
+meriApp.post("/benefits", upload.single('pic'), async (req, res) => {
+
+    let newBenefit = new Benefit(req.body);
+
     newBenefit.pic = req.file.originalname;
-    console.log(newBenefit);
-    benefits.push(newBenefit);
+
+    console.log(newBenefit)
+
+    await newBenefit.save()
+
     res.send("success");
 });
 
-meriApp.get('/benefits', (req, res) => {
-    res.json(benefits)
+meriApp.get('/benefits', async(req, res) => {
+
+    let newBenefit= await Benefit.find()
+    res.json(newBenefit)
 })
 
-meriApp.post('/faqs',(req,res)=>{
-    Faqs.push(req.body)
+meriApp.post('/faqs', async (req, res) => {
+
+    let newFaq = new Faq(req.body)
+
+    console.log(newFaq)
+    await newFaq.save()
+
     res.send("Success")
 })
 
-meriApp.get('/faqs', (req,res)=>{
-    res.json(Faqs)
+meriApp.get('/faqs', async (req, res) => {
+
+    let newFaq= await Faq.find()
+    res.json(newFaq)
 })
 
-meriApp.post('/feedback', (req,res)=>{
-    Feedback.push(req.body)
+meriApp.post('/feedback', async(req, res) => {
+    
+    let newFeedback= new Feedback(req.body)
+    
+    await newFeedback.save()
+
     res.send("Success")
 })
 
-meriApp.get("/feedback", (req,res)=>{
-    res.json(Feedback)
+meriApp.get("/feedback", async (req, res) => {
+
+    let newFeedback= await Feedback.find()
+
+    res.json(newFeedback)
 })
-// meriApp.use(myExpress.static('./server/build'))
+meriApp.use(myExpress.static('./server/build'))
 meriApp.use(myExpress.static('./server/pictures'))

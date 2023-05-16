@@ -25,7 +25,7 @@ export const AddBenefit = () => {
         axios.post("/benefits", meraForm).then((res)=>{
             if(res){
                 toast.success("Submitted")
-                // reset()
+                reset()
             }
         })
     }

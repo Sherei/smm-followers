@@ -40,25 +40,33 @@ export const Services = () => {
 
         <div className="container-fluid">
             <div className='row serviceCardMain gap-5 d-flex justify-content-center'>
-                {service.reverse().map((data) => {
-                    return <>
-                        <div className='col-lg-3 col-md-4 col-sm-12   servicesCard ' data-aos="zoom-in" onClick={() => {
-                            move('/service')
-                        }}>
-                            <div>
-                                <img src={data.pic} alt="" />
+                {Array.isArray(service) ? (
+                    service.map((data) => {
+                        return (
+                            <div
+                                className='col-lg-3 col-md-4 col-sm-12 servicesCard'
+                                data-aos='zoom-in'
+                                onClick={() => {
+                                    move('/service');
+                                }}
+                            >
+                                <div>
+                                    <img src={data.pic} alt='' />
+                                </div>
+                                <div>
+                                    <h3 className='benefit_title'>{data.title}</h3>
+                                </div>
+                                <div>
+                                    <p className='benefit_p'>{data.description}</p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 className='benefit_title'>{data.title}</h3>
-                            </div>
-                            <div>
-                                <p className='benefit_p'>{data.description}</p>
-                            </div>
-                        </div>
-                    </>
-                })}
-
-            </div >
+                        );
+                    })
+                ) : (
+                    <p>No services available.</p>
+                )}
+            </div>
         </div>
+
     </>
 }

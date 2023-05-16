@@ -23,6 +23,7 @@ function App() {
   let dispatch = useDispatch()
 
   useEffect(() => {
+    
     axios.post('/userSession', { token: localStorage.getItem('meraToken') }).then((res) => {
       if (res.data) {
         dispatch({
@@ -33,6 +34,8 @@ function App() {
     })
 
   }, [])
+
+
   let user = useSelector(store => store.userSection.cu)
 
   return <div className="main_body">

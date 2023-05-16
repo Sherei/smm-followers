@@ -6,7 +6,7 @@ import "./faq.css"
 export const Faq = () => {
 
   let [faq, setFaq] = useState([]);
-  
+
   useEffect(() => {
     axios.get('/faqs').then((res) => {
       setFaq(res.data)
@@ -20,16 +20,19 @@ export const Faq = () => {
       <div className="row mb-5">
         <div className="col-lg-12 col-md-12 ">
           <Accordion defaultActiveKey="0">
-            {faq.map((data, index) => {
-              return <>
-                <Accordion.Item eventKey={index} >
+            {Array.isArray(faq) ? (
+              faq.map((data, index) => (
+                <Accordion.Item eventKey={index} key={index}>
                   <Accordion.Header>{data.title}</Accordion.Header>
                   <Accordion.Body>
                     {data.description}
                   </Accordion.Body>
                 </Accordion.Item>
-              </>
-            })}
+              ))
+            ) : (
+              <p>Loading...</p>
+            )}
+
           </Accordion>
         </div>
       </div>
