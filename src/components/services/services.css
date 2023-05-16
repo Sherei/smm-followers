@@ -1,0 +1,63 @@
+.services_main{
+    margin: auto;
+    /* border: 1px solid black; */
+}
+.benefits{
+    margin-bottom: 60px;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #111625;
+    line-height: 1.4;
+}
+.services_main_article{
+    line-height: 2rem;
+    text-align: center;
+}
+.serviceCardMain{
+    width: 100%;
+    padding: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+    /* border: 1px solid black; */
+}
+.servicescol{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 1px solid red; */
+    gap: 5rem;
+    padding: 2rem 0rem;
+}
+.servicesCard{
+    height: fit-content;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: -20px 20px 30px 0 rgba(0, 0, 0, 10%);
+    display: flex;
+    padding: 3rem 0rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.servicesCard:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+.benefit_title{
+    color: #111625;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 15px auto;
+    text-align: center;
+    /* display: flex; */
+}
+.benefit_p{
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(17, 26, 37, 60%);
+    line-height: 1.6;
+    text-align: center;
+}

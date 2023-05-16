@@ -1,0 +1,33 @@
+.miantopic{
+    width: 100%;
+    height: auto;
+}
+.left-img{
+    background-image: url("https://cdn.mypanel.link/9b5331/qhrgkxoubxqqyn64.png"); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+.mian-title{
+    font-size: 48px;
+    color: #4582ec;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+.blog-clr{
+    color: #ff4b36;
+}
+.right-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right-img img{
+    width: 80%;
+    height: auto;
+}
+.btn-card{
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+}

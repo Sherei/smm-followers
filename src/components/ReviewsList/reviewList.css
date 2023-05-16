@@ -1,0 +1,18 @@
+table{
+    margin-top: 3rem;
+    justify-content: center;
+    width: 100%;
+    /* border: 1px solid red; */
+
+}
+tr:nth-child(odd) {
+    background-color: #e3edfe;
+    color: #2e7eff;
+  }
+  table thead{
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  table td{
+    padding: 1rem;
+  }

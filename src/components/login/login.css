@@ -1,0 +1,99 @@
+.home_main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.home_heading{
+    font-size: 24px;
+    color: #40abbe;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-left: 1.5rem;
+}
+
+.smm_panel{
+    font-size: 32px;
+    line-height: 1.4;
+    color: #111625;
+    margin-left: 1.5rem;
+    /* font-weight: bold; */
+}
+strong{
+    font-weight: bold;
+}
+.main_article{
+    line-height: 2rem;
+    margin-left: 1.5rem;
+
+}
+.home_form_main{
+    margin-left: 1.5rem;
+}
+.home_form_data{
+    border: 1px solid blue;
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+.home_form_data input{
+    width: 100%;
+    background-color: #F2F7FD;
+    border: none;
+
+}
+.home_form_data input:focus{
+    outline: none;
+}
+.icon{
+    padding: 1rem;
+    background-color: white;
+    color: #40abbe;
+    /* color: red; */
+    font-size: 1.2em;
+    border-radius: 10px;
+    text-shadow: 0 7px 15px rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 10%);
+}
+.homeSignup{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.homeSignup span{
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+.homeSignup a{
+    text-decoration: none;
+}
+.home_img{
+    display: flex;
+    justify-content: center;
+    height: 40rem;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.home_img img{
+    width: 100%;
+    height: 60%; 
+    border: 1px solid #f2f2f2;
+    background-color: none;
+    border-radius: 100px;
+}
+.socialLinksHome{
+    margin: 3rem 0rem;
+}
+
+@media screen and (max-width: 768px) {
+
+   .home_img{
+    display: none;
+   }
+    
+}

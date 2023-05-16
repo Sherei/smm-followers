@@ -1,0 +1,127 @@
+.title {
+    font-size: 45px;
+    font-weight: 800;
+    color: #111625;
+    line-height: 1.4;
+}
+.txt {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(17, 26, 37, 60%);
+    letter-spacing: 1.2px;
+}
+
+.input-style{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+.style2{
+    border: 1px solid rgba(47, 126, 255, 80%);
+    padding: 5px ;
+    background-color: #fff;
+    border-radius: 12px;
+}
+.style2 .btn.btn-primary {
+    min-width: 160px;
+    height: 55px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;    
+    background-color: #4D6EB4;
+    box-shadow: 0 10px 20px 0 #4D6EB4;
+}
+.input-1{
+    width: 350px;
+    height: 55px;
+    border: 0px solid;
+    padding: 0px 10px;
+}
+.input-1:focus{
+    outline: none;
+}
+
+@media only screen and (max-width: 786px) {
+    .style2 .btn.btn-primary {
+        min-width: 120px;
+        height: 55px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+    .input-1{
+        width: 310px;
+        height: 55px;
+        border: 0px solid;
+        padding: 0px 10px;
+    }
+  }
+  .main-footer1{
+    height: auto;    
+    background-color: #396edf;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+  }
+  .footer_copyright{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.footer_copyright span{
+    font-weight: 800;
+}
+.btn-open{
+    width: 160px;
+    line-height: 2.5rem;
+    padding: 0.3rem 0.3rem;
+    border-radius: 5px;
+    border: none !important;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    background-color:  #5EB1BF;
+    box-shadow: 0rem 0rem 1rem 0.2rem  #5EB1BF;
+}
+
+
+  @media only screen and (max-width: 488px) {
+    .style2 .btn.btn-primary {
+        min-width: 90px;
+        height: 50px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-radius: 10px;
+        font-size: 18px;
+      
+    }
+    .input-1{
+        width: 250px;
+        height: 50px;
+        border: 0px solid;
+        padding: 0px 10px;
+    }
+  }
+  @media only screen and (max-width: 411px) {
+    .style2 .btn.btn-primary {
+        min-width: 70px;
+        height: 50px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+    .input-1{
+        width: 180px;
+        height: 50px;
+        border: 0px solid;
+        padding: 0px 10px;
+    }
+  }
+  .img1{
+    /* margin: 0rem 5rem; */
+    width: 40rem !important ;
+  }

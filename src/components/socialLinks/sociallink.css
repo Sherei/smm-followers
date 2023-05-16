@@ -1,0 +1,44 @@
+.socialLinksMain{
+    background-image: url(https://cdn.mypanel.link/9b5331/ttltxr4cyiqn1wmw.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    /* background-size: cover; */
+    height: fit-content;
+    background-color: #008080;
+    display: flex;
+    flex-wrap: wrap;
+}
+.socialLinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4rem;
+    gap: 2rem;
+}
+.socialLinks button{
+    width: 15rem;
+    padding: 0.9rem 1rem;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    color: white;
+    background-color: #4582ec;
+
+}
+.socialLinks button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all ease-in 0.3s;
+}
+.socialLinks span{
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .socialLinks{
+     padding: 1.5rem;
+    }
+     
+ }

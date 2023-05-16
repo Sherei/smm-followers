@@ -1,0 +1,19 @@
+.h1-style{
+    /* font-size: 20px; */
+}
+.accordion-button  {
+    background-color: #182e57 !important;
+    border-radius: 9px !important;
+    color: rgba(255, 255, 255, 39%) !important;
+    
+}
+.accordion-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.accordion-item {
+    margin-bottom: 1rem !important;
+}
+.accordion-body {
+    color: rgba(17, 26, 37, 60%) !important;
+}

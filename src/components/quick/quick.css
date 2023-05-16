@@ -1,0 +1,40 @@
+.quick{
+    margin-bottom: 6rem;
+    /* border: 1px solid black; */
+    width: 100%;
+
+}
+.img_div{
+    display: flex;
+    justify-content: right;
+}
+.quick_img{
+    width: 70%;
+}
+.quick_Detail{
+    vertical-align: middle ;
+}
+.quick_title{
+    font-size: 45px;
+    font-weight: 800;
+    color: #111625;
+    line-height: 1.4;
+}
+.title_span{
+    font-size: 45px;
+    font-weight: 800;
+    /* color: #111625; */
+    line-height: 1.4;
+    /* color: #2e7eff; */
+    color: #40abbe;
+}
+.quick_main_article{
+    line-height: 2.5rem;
+    /* margin-left: 1.5rem; */
+}
+.quick_btn{
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    letter-spacing: 0rem;
+}

@@ -1,0 +1,45 @@
+.navbarmain{
+    border-bottom: 1px solid red;
+    margin-bottom: 3.5rem;
+
+}
+.logo{
+    font-weight: 800;
+    font-family: 'Rubik Puddles', cursive;
+    letter-spacing: 0.5rem;
+}
+.navLink{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    line-height: 2rem;
+    color: black;
+    font-weight: 600;
+}
+.navLink2{
+    /* border: 1px solid red; */
+    display: flex;
+    margin-left: 2rem;
+}
+.nav_signup{
+    /* width: fit-content; */
+    line-height: 2.5rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    background-color:  #5EB1BF;
+    box-shadow: 0rem 0rem 1rem 0.2rem  #5EB1BF;    
+}
+.nav_signup button{
+    border: none;
+    background: none;
+    font-size: 20px;
+    color:white;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    width: fit-content;
+}
+.nav_signup:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all ease-in-out 0.2s;
+}

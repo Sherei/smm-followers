@@ -1,0 +1,110 @@
+.services2_heading{
+    font-size: 45px;
+    font-weight: 800;
+    color: #111625;
+    line-height: 2.4;
+}
+.services2_heading span{
+    color: #2e7eff;
+}
+.socialLinks1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4rem;
+    gap: 2rem;
+}
+.socialLinks1 button{
+    width: 15rem;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    color: white;
+    background-color: #2e7eff;
+    border: none;
+}
+.socialLinks1 span{
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .socialLinks1{
+     padding: 1.5rem;
+    }
+     
+ }
+ 
+ .service-input{
+    margin: 0 0.7rem ;
+    /* width: 550px; */
+    height: 50px;
+    border: 1px solid #2e7eff;
+    border-radius: 12px !important;
+    color: #919294;
+    font-size: 14px;
+    padding: 0 1.2rem; 
+ }
+ .service-input:focus{
+    border: #2e7eff solid;
+    outline: none;
+ }
+ .services2-search-btn{
+    border-radius: 15px !important;
+    height: 60px;
+    background-color: red !important;
+    border: none !important;
+ }
+ .dropdown-toggle {
+    background-color: red !important;
+    border: none !important;
+    height: 3.5rem;
+    width: 11rem;
+    margin-left: 0.5rem;
+    border-radius: 12px;
+    color: #fff;
+ }
+/* 
+.services2_heading{
+    font-size: 45px;
+    font-weight: 800;
+    color: #111625;
+    line-height: 2.4;
+}
+.service2 span{
+    color:#2e7eff;
+}
+.socialLinksMain2{
+    background: none;
+}
+.socialLinks button{
+    padding: 0.5rem 0rem;
+}
+.services_row{
+    width: 40%;
+    height: 3.5rem;
+    border-radius: 10px;
+
+}
+.services2_search{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.service2_btn {
+    border: 1px solid red;  
+    width: 4rem;
+    padding: 0.8rem 0rem;
+    background-color: red;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 30px;
+}
+.btn2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+} */
